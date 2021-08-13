@@ -1,11 +1,16 @@
-import { Button } from './components';
+import {
+  Button,
+  PokedexFrame
+} from './components';
 
 function App() {
   return (
     <div>
-      <Button
-        label="Catch 'em all!"
-      />
+      <PokedexFrame>
+        <Button
+          label="Hello world!"
+        />
+      </PokedexFrame>
     </div>
   );
 }

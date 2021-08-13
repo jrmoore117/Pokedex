@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import "../components/Button/button.css";
+@import "../components/PokedexFrame/pokedexframe.css";
 
 html,
 html * {
