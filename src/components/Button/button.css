@@ -1,0 +1,22 @@
+.button {
+   /* Base Button */
+   @apply h-10 px-4 font-sans text-sm rounded flex items-center justify-center;
+   
+   /* Small */
+   &--small {
+      @apply h-8;
+   }
+   
+   /* Default Variant */
+   &--default {
+      @apply border-2 border-gray-200;
+   }
+   &--default:active {
+      @apply border-2 border-gray-500 bg-gray-0;
+   }
+
+   /* Disabled */
+   &--disabled {
+      @apply select-none text-gray-500 bg-gray-0 border-2 border-gray-200 cursor-not-allowed;
+   }
+}
