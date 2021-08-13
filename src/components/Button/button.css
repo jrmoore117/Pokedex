@@ -7,7 +7,7 @@
       @apply h-8;
    }
    
-   /* Default Variant */
+   /* button--default */
    &--default {
       @apply border-2 border-gray-200;
    }
@@ -15,7 +15,7 @@
       @apply border-2 border-gray-500 bg-gray-0;
    }
 
-   /* Disabled */
+   /* button--disabled */
    &--disabled {
       @apply select-none text-gray-500 bg-gray-0 border-2 border-gray-200 cursor-not-allowed;
    }

@@ -14,7 +14,7 @@ export const Button = ({
       'button',
       className, {
       'button--small': isSmall,
-      [`button--disabled`]: isDisabled,
+      'button--disabled': isDisabled,
       [`button--${variant}`]: !isDisabled,
    });
 
