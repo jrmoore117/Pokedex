@@ -1,15 +1,20 @@
 import {
-  Button,
-  PokedexFrame
+  PokedexFrame,
+  PokedexFrameLeft,
+  PokedexFrameRight,
+  ImageScreen,
+  ImageScreenControls
 } from './components';
 
 function App() {
   return (
-    <div>
+    <div className="home">
       <PokedexFrame>
-        <Button
-          label="Hello world!"
-        />
+        <PokedexFrameLeft>
+          <ImageScreen/>
+          <ImageScreenControls/>
+        </PokedexFrameLeft>
+        <PokedexFrameRight/>
       </PokedexFrame>
     </div>
   );

@@ -1,0 +1,35 @@
+.image-screen-controls-container {
+   @apply h-2/5 w-full flex items-center justify-evenly;
+}
+
+.play-button-control {
+   @apply border-2 border-black rounded-full h-12 w-12 bg-gray-800;
+}
+
+.select-button-control {
+   @apply border-2 border-black rounded-full h-2.5 w-16 bg-[#ff0000];
+}
+
+.start-button-control {
+   @apply border-2 border-black rounded-full h-2.5 w-16 bg-[#85bdfe];
+}
+
+.directional-pad-controls {
+   @apply h-24 w-24 relative;
+}
+
+.directional-pad-up {
+   @apply bg-gray-800 border-2 border-black h-10 w-8 absolute top-0 left-1/2 -mx-4 rounded-b-2xl rounded-tl rounded-tr;
+}
+
+.directional-pad-right {
+   @apply bg-gray-800 border-2 border-black h-8 w-10 absolute right-0 top-1/2 -my-4 rounded-l-2xl rounded-br rounded-tr;
+}
+
+.directional-pad-down {
+   @apply bg-gray-800 border-2 border-black h-10 w-8 absolute bottom-0 left-1/2 -mx-4 rounded-t-2xl rounded-bl rounded-br;
+}
+
+.directional-pad-left {
+   @apply bg-gray-800 border-2 border-black h-8 w-10 absolute left-0 top-1/2 -my-4 rounded-r-2xl rounded-tl rounded-bl;
+}

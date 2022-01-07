@@ -3,9 +3,18 @@
 @import "tailwindcss/utilities";
 
 @import "../components/Button/button.css";
-@import "../components/PokedexFrame/pokedexframe.css";
+@import "../components/ImageScreen/imageScreen.css";
+@import "../components/ImageScreenControls/imageScreenControls.css";
+@import "../components/PokedexFrame/pokedexFrame.css";
+@import "../components/PokedexFrameLeft/pokedexFrameLeft.css";
+@import "../components/PokedexFrameRight/pokedexFrameRight.css";
 
 html,
 html * {
    @apply font-sans;
+}
+
+.home {
+   @apply h-screen w-screen flex justify-center items-center;
+   background-image: url('./assets/images/galar-region.jpg');
 }
