@@ -1,31 +1,29 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { PokemonProvider } from '../../contexts/PokemonContext';
+import { getPokemon } from '../../reducers';
+
+import { usePokemonStore } from '../../contexts/PokemonContext';
 
 export const PokedexFrame = ({
    children,
    className,
    ...props
 }) => {
-   
-   const [pokemon, setPokemon] = useState({});
-   const [pokemonNumber, setPokemonNumber ] = useState(1);
-   
+
+   const [globalState, dispatch] = usePokemonStore();
+
    // Make API Call
    useEffect(() => {
-      axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`)
+      axios.get(`https://pokeapi.co/api/v2/pokemon/${globalState.pokemonNumber}`)
          .then(res => {
             // Set API Response to state
-            setPokemon(res.data);
+            dispatch(getPokemon(res.data));
          })
          .catch(err => console.log(err));
-   }, [pokemonNumber]);
+   }, [globalState.pokemonNumber]);
 
    const pokedexFrameClasses = classNames(
       'pokedex-frame',
@@ -33,14 +31,13 @@ export const PokedexFrame = ({
    );
 
    return (
-      <PokemonProvider value={pokemon}>
-         <div
-            className={pokedexFrameClasses}
-            {...props}
-         >
-            {children}
-         </div>
-      </PokemonProvider>
+
+      <div
+         className={pokedexFrameClasses}
+         {...props}
+      >
+         {children}
+      </div>
    )
 };
 

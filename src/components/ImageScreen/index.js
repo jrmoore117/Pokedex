@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+
+import { usePokemonStore } from '../../contexts/PokemonContext';
 
 export const ImageScreen = ({
    className,
    ...props
 }) => {
+
+   const [globalState] = usePokemonStore();
+
    return (
       <div
          className="image-screen-container"
@@ -22,7 +26,7 @@ export const ImageScreen = ({
             </div>
             <div className="image-screen-widgets-container">
                <div className="light-widget"></div>               
-               <div className="pokemon-name-widget">charmander</div>
+               <div className="pokemon-name-widget">{globalState.pokemon.name}</div>
                <div className="pokemon-menu-widget">
                   <span className="pokemon-menu-widget-line"></span>
                   <span className="pokemon-menu-widget-line"></span>

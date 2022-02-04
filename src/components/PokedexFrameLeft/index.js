@@ -1,21 +1,21 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import { usePokemonContext } from '../../contexts/PokemonContext';
+import { usePokemonStore } from '../../contexts/PokemonContext';
 
 export const PokedexFrameLeft = ({
    children,
    className,
    ...props
 }) => {
-   const pokemon = usePokemonContext();
+   const [globalState] = usePokemonStore();
 
    const pokedexFrameLeftClasses = classNames(
       'pokedex-frame-left',
       className
    );
 
-   console.log("pokemon from context", pokemon);
+   console.log("pokemon from context", globalState.pokemon);
    
    return (
       <div
