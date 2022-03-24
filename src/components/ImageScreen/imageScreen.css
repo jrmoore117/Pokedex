@@ -3,7 +3,7 @@
 }
 
 .image-screen {
-   @apply bg-gray-200 h-72 w-80 rounded-bl-3xl border-4 border-black overflow-hidden;
+   @apply bg-gray-200 h-72 w-80 rounded-bl-3xl border-4 border-black overflow-hidden px-8;
 }
 
 .image-screen-lights-container {
@@ -19,11 +19,11 @@
 }
 
 .pokemon-image {
-   @apply h-full w-64 h-44 rounded-md border-2 border-black;
+   @apply h-full w-64 h-44 rounded-md border-2 border-black flex justify-center;
 }
 
 .image-screen-widgets-container {
-   @apply pt-5 h-20 flex justify-evenly;
+   @apply pt-5 h-20 flex justify-between;
 }
 
 .light-widget {

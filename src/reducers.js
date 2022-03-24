@@ -4,7 +4,7 @@ export const actionTypes = {
 }
 
 export const initialState = {
-  pokemon: [],
+  pokemon: null,
   pokemonNumber: 1,
 };
 

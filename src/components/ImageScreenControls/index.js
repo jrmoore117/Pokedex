@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { updatePokemonNumber } from '../../reducers';
+
 import { usePokemonStore } from '../../contexts/PokemonContext';
 
 export const ImageScreenControls = ({
@@ -11,11 +12,11 @@ export const ImageScreenControls = ({
    const [globalState, dispatch] = usePokemonStore();
 
    const nextPokemon = () => {
-      dispatch(updatePokemonNumber(globalState.pokemonNumber + 1));
+      dispatch(updatePokemonNumber(globalState.pokemonNumber === 151 ? 1 : globalState.pokemonNumber + 1));
    }
 
    const previousPokemon = () => {
-      dispatch(updatePokemonNumber(globalState.pokemonNumber - 1));
+      dispatch(updatePokemonNumber(globalState.pokemonNumber === 1  ? 151 : globalState.pokemonNumber - 1));
    }
 
    return (

@@ -23,7 +23,7 @@
 }
 
 .directional-pad-right {
-   @apply bg-gray-800 border-2 border-black h-8 w-10 absolute right-0 top-1/2 -my-4 rounded-l-2xl rounded-br rounded-tr;
+   @apply bg-gray-800 border-2 border-black cursor-pointer h-8 w-10 absolute right-0 top-1/2 -my-4 rounded-l-2xl rounded-br rounded-tr hover:bg-gray-900 active:bg-gray-1000 transition duration-100;
 }
 
 .directional-pad-down {
@@ -31,5 +31,5 @@
 }
 
 .directional-pad-left {
-   @apply bg-gray-800 border-2 border-black h-8 w-10 absolute left-0 top-1/2 -my-4 rounded-r-2xl rounded-tl rounded-bl;
+   @apply bg-gray-800 border-2 border-black cursor-pointer h-8 w-10 absolute left-0 top-1/2 -my-4 rounded-r-2xl rounded-tl rounded-bl hover:bg-gray-900 active:bg-gray-1000 transition duration-100;
 }
